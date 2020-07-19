@@ -151,3 +151,21 @@ main.menu-hover {
     border-radius: 0.001px;
     transform: translateX(1em) rotateY(1deg);
 }
+
+.content-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    width: 100%;   
+}

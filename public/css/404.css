@@ -1,0 +1,40 @@
+.small-banner {
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    border: 3px solid green;
+    margin-bottom: 50px;
+}
+
+.txt-404 {
+    text-align: center;
+}
+
+.p-404 {
+    width: 320px;
+}
+
+.h-404 {
+    font-size: 50px;
+    transition: transform 1s;
+}
+
+.h-404:hover {
+    color: #f0a500;
+    -webkit-text-stroke: 1px black;   
+}
+
+@media only screen and (min-width: 768px) {
+    .h-404 {
+        font-size: 75px;
+    }
+
+    .small-banner {
+        height: 150px;
+    }
+
+    .p-404 {
+        width: 600px;
+        font-size: 30px;
+    }
+}

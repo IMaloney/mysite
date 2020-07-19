@@ -1,5 +1,8 @@
 const express = require('express');
+const youtube = require('./api/youtube');
+
 const app = express();
+
 
 app.set('views', path.join(__dirname, 'html'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -14,7 +17,9 @@ app.get('/', (req, res)=> {
 });
 
 // videos page
-app.get('/videos', (req, res) => {
+app.get('/videos', async (req, res) => {
+	// pass this info down
+	const videos = await youtube.get('/search');
     res.render('videos');
 });
 
