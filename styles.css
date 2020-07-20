@@ -171,6 +171,13 @@ main.menu-hover {
     width: 100%;   
 }
 
+.small-banner {
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
 /*index styles*/
 .banner {
     width: 100%;
@@ -565,14 +572,6 @@ ul li a:hover {
 
 
 /*404 styles*/
-/* small banner may be global */
-.small-banner {
-    width: 100%;
-    background-color: black;
-    height: 100px;
-    margin-bottom: 50px;
-}
-
 .txt-404 {
     text-align: center;
 }

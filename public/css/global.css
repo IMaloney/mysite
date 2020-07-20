@@ -152,6 +152,10 @@ main.menu-hover {
     transform: translateX(1em) rotateY(1deg);
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
 .content-div {
     position: absolute;
     top: 0;
@@ -168,4 +172,26 @@ main.menu-hover {
     margin: auto;
     text-align: center;
     width: 100%;   
+}
+
+.small-banner {
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.header {
+    font-size: 60px;
+}
+
+.header:hover {
+    color: #f0a500;
+    -webkit-text-stroke: 1px black; 
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        font-size: 100px;  
+    }
 }

@@ -194,11 +194,6 @@ ul li a:hover {
     background-color: #f0a500;
 }
 
-
-::-webkit-scrollbar {
-    width: 0;
-}
-
 .section-div {
     margin-left: 10px;
     margin-right: 10px;

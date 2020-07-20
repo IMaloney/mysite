@@ -1,7 +1,7 @@
 const axios = require('axios');
 const keys = require('../config/keys');
 
-export default axios.create({
+const youtube = axios.create({
 	baseURL: 'https://www.googleapis.com/youtube/v3',
 	params: {
 		part: 'snippet',
@@ -12,3 +12,5 @@ export default axios.create({
 		key: keys.youtubeKey
 	}
 });
+
+module.exports = youtube;

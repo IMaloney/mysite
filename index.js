@@ -1,13 +1,15 @@
 const express = require('express');
+const path = require('path');
 const youtube = require('./api/youtube');
+const parser = require('body-parser');
 
 const app = express();
-
+app.use(parser.json());
 
 app.set('views', path.join(__dirname, 'html'));
 app.use(express.static(path.join(__dirname, 'public')));
 // may or may not need this actually
-app.use(express.static(path.join(__dirname, 'node_modules')));
+// app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.set('view engine', 'ejs');
 
@@ -19,7 +21,7 @@ app.get('/', (req, res)=> {
 // videos page
 app.get('/videos', async (req, res) => {
 	// pass this info down
-	const videos = await youtube.get('/search');
+	// const videos = await youtube.get('/search');
     res.render('videos');
 });
 
@@ -40,9 +42,15 @@ app.get('/projects', (req, res) => {
 
 // download link
 app.get('/resume', (req, res) => {
-	const resume = `${__dirname}/upload_folder/resume.pdf`;
-	res.download(resume, 'RobertIanMaloneyResume.pdf');
+    // resume.pdf
+    // 'RobertIanMaloneyResume.pdf'
+	const resume = `${__dirname}/uploads/test.txt`;
+	res.download(resume, 'poopTestLoad.txt');
 });
+
+app.post('/contact-me', (req, res) => {
+
+}); 
 
 app.use((req, res, next) => {
     res.status(404).render('404');
