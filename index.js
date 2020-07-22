@@ -8,8 +8,6 @@ app.use(parser.json());
 
 app.set('views', path.join(__dirname, 'html'));
 app.use(express.static(path.join(__dirname, 'public')));
-// may or may not need this actually
-// app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.set('view engine', 'ejs');
 
