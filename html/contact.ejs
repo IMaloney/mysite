@@ -29,18 +29,13 @@
       <div class='small-banner'></div>
       <div class='center'>
           <h1 class=' header'>Contact</h1>
-          <p>You can request source code from my school projects here. If I do not recognize your email, this is the best way to reach me and receive a response. I respond as soon as I can!</p>
-          <form method='post' action="/contact-me">
-            <label for="name">Name:</label><br>
-            <!-- need to expand width as text fills in -->
-            <input class='in' type="text" id="name" name='name'><br>
-            <label for="email">Email:</label><br>
-            <input class='in' type="text" id="email" name='email'><br>
-            <label for="description">Ask Anything!</label><br>
-            <!-- this should be a textarea -->
-            <input class='last-input' type="text" name="description" id="description"><br>
-            <input class='btn-submit' type="submit" value="Send it!"><br>
-          </form>             
+          <p>You can request source code from my school projects here or ask anything else. If you are interested in a response, please include your name and your reason for emailing when reaching out. I respond as soon as I can!</p>  
+          <a href="mailto:<%= email %>">       
+            <div class='btn-submit center'>
+              Email Me!
+            </div>
+          </a>
+        <br>
       </div>
     </div>    
   </main>

@@ -34,7 +34,7 @@
       </div>
 <!-- are made public when they are almost complete (excluding ecommerce sites) -->
         <div class="add-margins">
-          <p class='disclaimer center'>A running list of projects I am working on and have worked on both for fun and for school. Fun projects will be made public. School projects are not made public. If you are interested in seeing the source code for school projects, you must request access using the "Contact Me" page by specifying who you are and which project you would like to see.</p>
+          <p class='disclaimer center'>A running list of projects I am working on and have worked on both for fun and for school. Fun projects will be made public. School projects are not made public. If you are interested in seeing the source code for school projects, you must request access using the <a href='/contact' style="color: black;">Contact Me</a> page by specifying who you are and which project you would like to see.</p>
         </div>
         
         <div class="projects-div">      
@@ -48,7 +48,7 @@
                     <div class="card-body">
                       <h5 class="card-title"><%= home[i].name %></h5>
                       <h6 class="card-subtitle mb-2 text-muted"><%= home[i].stack %></h6>
-                      <p class="card-text"><%= home[i].description %></p>
+                      <p class="card-text new-size"><%= home[i].description %></p>
                       <% if (home[i].link) { %>
                       <a href="<%= home[i].link %>" class="card-link"><%= home[i].linkLoc %></a>
                       <% } else { %>
@@ -75,7 +75,7 @@
                   <div class="card-body">
                     <h5 class="card-title"><%= school[i].name %></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><%= school[i].stack %></h6>
-                    <p class="card-text"><%= school[i].description %></p>
+                    <p class="card-text new-size"><%= school[i].description %></p>
                     <a href="/contact" class="card-link">Request Access</a>
                   </div>
                 </div>

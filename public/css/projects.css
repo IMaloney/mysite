@@ -26,6 +26,18 @@
 	padding-bottom: 30px;
 }
 
+h5 {
+    font-size: 1.75rem;
+}
+
+h6 {
+    font-size: 1.3rem;
+}
+
+.new-size {
+    font-size: 1.2rem;
+}
+
 @media only screen and (min-width: 768px) {
     .disclaimer {
         margin-top: 30px;
@@ -44,6 +56,6 @@
 	}    
 
 	.title {
-		font-size: 55px;
+		font-size: 60px;
 	}
 }

@@ -3,39 +3,28 @@ p {
     margin-bottom: 15px;
     margin-left: 30px;
     margin-right: 30px;
-    font-size: 20px
-}
-
-form label {
-    font-size: 25px;
-}
-
-form input {
-    font-family: 'Pridi', serif;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    width: 250px;
-    font-size: 40px;
-}
-
-.in {
-    height: 50px;
-} 
-
-.last-input {
-    height: 150px;
+    font-size: 20px;
+    padding-bottom: 75px;
 }
 
 .btn-submit {
+    text-align: center;
+    font-family: 'Pridi', serif;
+    border-radius: 5px;
     width: 250px;
     font-size: 25px;
     background-color: #f0a500;
+    border: 3px solid black;
 }
 
 .btn-submit:hover {
     color: #f0a500;
     background-color: black;
-  
+}
+
+a {
+    color: black;
+    text-decoration: none; 
 }
 
 @media only screen and (min-width: 768px) {

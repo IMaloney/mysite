@@ -3,7 +3,7 @@ const home = [
 	{
 		name: 'Signmeup V2',
 		stack: 'React Native',
-		description: 'A companion Application built to work with Brown University\'s current system for managing interactions between students and teaching assistants.',
+		description: 'Companion app built to work with Brown University\'s system for managing interactions between students and TAs.',
 		link: '',
 		linkLoc: 'Github' 
 	},
@@ -84,7 +84,7 @@ const school = [
 		description: 'A simple Operating System based on earlier versions of Unix. Built out the process and thread scheduling, low level drivers, virtual file system, s5fs file system, and virtual memory.'
 	},
 	{
-		name: 'Uthreads/Mthreads',
+		name: 'U/M-Threads',
 		stack: 'C',
 		//  complete with thread creation/ deletion/ joining, mutexes, condition variables and a priority-based scheduler
 		description: 'User-level threads packages following the two-level N-to-1 and two-level M-to-N models.'

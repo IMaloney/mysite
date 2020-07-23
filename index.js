@@ -3,6 +3,8 @@ const path = require('path');
 // const youtube = require('./api/youtube');
 const parser = require('body-parser');
 const projects = require('./projects');
+// TODO: replace with dotenv file at some point
+const keys = require('./config/keys');
 
 
 const home = projects.home,
@@ -34,7 +36,7 @@ app.get('/blog', (req, res) => {
 
 // contact page
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', {email: keys.email});
 });
 
 // projects page
@@ -47,10 +49,6 @@ app.get('/resume', (req, res) => {
 	const resume = `${__dirname}/uploads/resume.pdf`;
 	res.download(resume, 'RobertIanMaloneyResume.pdf');
 });
-
-app.post('/contact-me', (req, res) => {
-
-}); 
 
 app.use((req, res, next) => {
     res.status(404).render('404');
