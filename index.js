@@ -1,7 +1,12 @@
 const express = require('express');
 const path = require('path');
-const youtube = require('./api/youtube');
+// const youtube = require('./api/youtube');
 const parser = require('body-parser');
+const projects = require('./projects');
+
+
+const home = projects.home,
+      school = projects.school; 
 
 const app = express();
 app.use(parser.json());
@@ -18,7 +23,6 @@ app.get('/', (req, res)=> {
 
 // videos page
 app.get('/videos', async (req, res) => {
-	// pass this info down
 	// const videos = await youtube.get('/search');
     res.render('videos');
 });
@@ -35,15 +39,13 @@ app.get('/contact', (req, res) => {
 
 // projects page
 app.get('/projects', (req, res) => {
-	res.render('projects');
+	res.render('projects', { home, school });
 });
 
 // download link
 app.get('/resume', (req, res) => {
-    // resume.pdf
-    // 'RobertIanMaloneyResume.pdf'
-	const resume = `${__dirname}/uploads/test.txt`;
-	res.download(resume, 'poopTestLoad.txt');
+	const resume = `${__dirname}/uploads/resume.pdf`;
+	res.download(resume, 'RobertIanMaloneyResume.pdf');
 });
 
 app.post('/contact-me', (req, res) => {

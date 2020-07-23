@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!-- custom style sheet -->
   <link rel="stylesheet" href="/css/global.css">
-  <!-- <link rel="stylesheet" href="projects.css"> -->
+  <link rel="stylesheet" href="/css/projects.css">
 </head>
 <body>
     <%- include("./include/navbar"); -%>
@@ -32,24 +32,62 @@
       <div class='center'>
         <h1 class='header'>Projects</h1>     
       </div>
-      <!-- bootstrap -->
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<!-- are made public when they are almost complete (excluding ecommerce sites) -->
+        <div class="add-margins">
+          <p class='disclaimer center'>A running list of projects I am working on and have worked on both for fun and for school. Fun projects will be made public. School projects are not made public. If you are interested in seeing the source code for school projects, you must request access using the "Contact Me" page by specifying who you are and which project you would like to see.</p>
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        
+        <div class="projects-div">      
+          <h1 class='title'>For Fun</h1>  
+            <!-- bootstrap --> 
+            <ul class='projects-list'>
+              <% for (let i=0; i < home.length; i++) {%>
+              <li>
+                <div class='space'>
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= home[i].name %></h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><%= home[i].stack %></h6>
+                      <p class="card-text"><%= home[i].description %></p>
+                      <% if (home[i].link) { %>
+                      <a href="<%= home[i].link %>" class="card-link"><%= home[i].linkLoc %></a>
+                      <% } else { %>
+                        <p class="card-text" style="color: #007bff;">Coming Soon!</p>
+                      <% } %>
+                      <% if (home[i].linkTwo) { %>
+                      <a href="<%= home[i].linkTwo %>" class="card-link"><%= home[i].linkLocTwo %></a>
+                      <% } %>
+                    </div>
+                  </div>              
+                </div>
+              </li> 
+              <% } %>              
+            </ul>  
         </div>
-      </div>      
-    </div>    
+
+        <div class="projects-div">
+          <h1 class='title'>School</h1>
+          <ul class='projects-list'>
+            <% for (let i=0; i < school.length; i++) { %>
+            <li>
+              <div class='space'>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= school[i].name %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= school[i].stack %></h6>
+                    <p class="card-text"><%= school[i].description %></p>
+                    <a href="/contact" class="card-link">Request Access</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <% } %>                                  
+          </ul>
+        </div>
+
+
+
+     </div>    
   </main>
   <script src="/js/navbar.min.js"></script>        
 </main>    
