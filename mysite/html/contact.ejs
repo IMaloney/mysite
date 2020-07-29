@@ -2,12 +2,12 @@
 <html lang='en'>
 <head>
   <meta charset="utf-8">
-  <title>404</title>
-  <meta name="description" content="The resource you are looking for was either removed or never existed in the first place. Sorry!">
+  <title>Contact</title>
+  <meta name="description" content="The best way to contact Ian Maloney.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Robert Ian Maloney">
   <!-- favicons -->
-  <%- include("./include/favicon"); -%>
+  <%- include("./include/favicon"); -%>  
   <!-- jquery -->
   <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -19,22 +19,27 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap" rel="stylesheet">
   <!-- custom style sheet -->
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/404.css">
+  <link rel="stylesheet" href="/css/global.min.css">
+  <link rel="stylesheet" href="/css/contact.min.css">
 </head>
 <body>
-<%- include("./include/navbar"); -%>
-  <main>
-    <div class='content-div'>
+    <%- include("./include/navbar"); -%>
+    <main>
+     <div class='content-div'>
       <div class='small-banner'></div>
-      <div class='txt-404'>
-        <h1 class='h-404'>404</h1>
-        <div class='p-404 center'>
-          <p>The resource you are looking for was either removed or never existed in the first place. Check out the menu for options!</p>
-        </div>
+      <div class='center'>
+          <h1 class=' header'>Contact</h1>
+          <p>You can request source code from my school projects here or ask anything else. If you are interested in a response, please include your name and your reason for emailing when reaching out. I respond as soon as I can!</p>  
+          <a href="mailto:<%= email %>">       
+            <div class='btn-submit center'>
+              Email Me!
+            </div>
+          </a>
+        <br>
       </div>
-    </div>
+    </div>    
   </main>
-  <script src="/js/navbar.min.js"></script>
+  <script src="/js/navbar.min.js"></script>        
+</main>    
 </body>
 </html>

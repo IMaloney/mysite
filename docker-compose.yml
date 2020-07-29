@@ -1,0 +1,15 @@
+version: '3'
+services:
+  myserver:
+      build:
+          dockerfile: Dockerfile
+          context: ./mysite
+      volumes: 
+        - /app/node_modules
+  nginx:
+    restart: always
+    build:
+        dockerfile: Dockerfile
+        context: ./nginx
+    ports:
+        - '3000:80'
