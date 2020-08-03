@@ -54,7 +54,7 @@ const home = [
 		name: 'MySite',
 		stack: 'EJS, Express, Node',
 		description: 'This website.',
-		link: '',
+		link: 'https://github.com/IMaloney/mysite',
 		linkLoc: 'Github',
 		linkTwo: '/',
 		linkLocTwo: 'Home'

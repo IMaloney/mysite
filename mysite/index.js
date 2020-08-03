@@ -18,6 +18,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 
+app.use((req, res, next) => {
+    res.set({
+        "X-Content-Types-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "origin",
+        "Expect-CT": "max-age=3600, enforce",
+        "Server": "none",
+        "X-Powered-By": "none",
+        "Content-Security-Policy": "default-src 'none'; connect-src 'self';font-src https:; img-src 'self' data: https:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https:; manifest-src 'self'",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains;"
+    });
+    next();
+});
 // home page
 app.get('/', (req, res)=> {
     res.render('home');
