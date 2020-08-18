@@ -58,7 +58,7 @@ const home = [
 		linkLoc: 'Github',
 		linkTwo: '/',
 		linkLocTwo: 'Home'
-	}
+	},
 	// these will be commented out until the projects are made public on github
 	// ,
 	// {
@@ -67,12 +67,13 @@ const home = [
 	// 	description: '',
 	// 	link: ''
 	// },
-	// {
-	// 	name: 'Clash Royale API',
-	// 	stack: 'Python',
-	// 	description: '',
-	// 	link: ''
-	// }
+	{
+		name: 'Clash Royale API',
+		stack: 'Python',
+		description: 'CLI to access stats on players and clans. Contains a live server as well.',
+		link: 'https://github.com/IMaloney/ClashRoyale',
+		linkLoc: 'Github'
+	}
 
 ];
 

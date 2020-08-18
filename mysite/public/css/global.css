@@ -122,6 +122,10 @@ nav ul {
     color: black;
 }
 
+.close {
+    opacity: .5;
+}
+
 main {
     z-index: 0;
     position: absolute;

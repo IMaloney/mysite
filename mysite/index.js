@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     res.set({
         "X-Content-Types-Options": "nosniff",
         "X-Frame-Options": "SAMEORIGIN",
-        "Referrer-Policy": "origin",
+        "Referrer-Policy": "no-referrer",
         "Expect-CT": "max-age=3600, enforce",
         "Server": "none",
         "X-Powered-By": "none",
@@ -31,6 +31,7 @@ app.use((req, res, next) => {
     });
     next();
 });
+
 // home page
 app.get('/', (req, res)=> {
     res.render('home');
@@ -67,6 +68,8 @@ app.use((req, res, next) => {
     res.status(404).render('404');
 });
 
-app.listen(3000, ()=>{
-    console.log('listening on port 3000');
+const port = process.env.PORT || 3000;
+
+app.listen(port, ()=>{
+    console.log(`listening on port ${port}`);
 });
